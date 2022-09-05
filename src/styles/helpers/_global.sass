@@ -1,0 +1,28 @@
+@use './vars' as variables
+  
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+
+html 
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 62.5%
+
+body 
+  font-size: 1.6rem
+  font-family: variables.$font-main
+
+a
+  text-decoration: none
+  color: variables.$color-variation
+  &:hover
+    text-decoration: underline
+
+#root
+  width: 100%
+  height: 100%
+  background-color: variables.$color-gray
+  color: variables.$color-dark
+  font-weight: 400

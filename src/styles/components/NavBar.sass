@@ -1,0 +1,35 @@
+@use '../helpers/vars' as variables
+  
+.NavBar
+  width: 100%
+  color: variables.$color-clear
+  display: flex
+  justify-content: space-between
+  &__city
+    display: flex
+    width: calc(100% - 32px)
+    &__info
+      font-size: 1.4rem
+      display: flex
+      align-items: center
+      &:first-child
+        font-weight: bold
+      &:last-child
+        font-size: 1.2rem
+        padding-left: 12px
+
+@media screen and (min-width: 468px)
+  .NavBar
+    &__city
+      &__info
+        font-size: 1.6rem
+        &:last-child
+          font-size: 1.4rem
+
+@media screen and (min-width: 600px)
+  .NavBar
+    &__city
+      &__info
+        font-size: 1.8rem
+        &:last-child
+          font-size: 1.6rem      

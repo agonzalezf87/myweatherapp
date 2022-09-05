@@ -1,0 +1,27 @@
+@use '../helpers/vars' as variables
+
+.MenuButton
+  width: 36px
+  height: 36px
+  cursor: pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    svg
+      color: variables.$color-base
+  svg
+    font-size: 3.2rem
+    line-height: 3.6rem
+
+@media screen and (min-width: 468px)
+  .MenuButton
+    width: 48px
+    height: 48px
+    svg
+      font-size: 4.4rem
+      line-height: 4.8rem
+
+@media screen and (min-width: 800px)
+  .MenuButton
+    display: none
