@@ -6,9 +6,13 @@
   left: 0
   height: 64px
   width: 100%
-  padding: 8px 16px
+  padding: variables.$padding-mobiles
   background-color: variables.$color-dark
   border-bottom: 3px solid variables.$color-base
   display: flex
   align-items: center
-  justify-content: space-between
+  justify-content: center
+
+@media screen and (min-width: 600px)
+  .Header
+    padding: variables.$padding-screens

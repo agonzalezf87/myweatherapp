@@ -1,5 +1,5 @@
 import { NavBar } from "../components/NavBar"
-import '../styles/components/Header.sass'
+import '../styles/containers/Header.sass'
 
 const Header = () => {
   return (
