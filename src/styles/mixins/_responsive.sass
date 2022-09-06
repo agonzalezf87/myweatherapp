@@ -1,9 +1,14 @@
 @use '../helpers/vars' as variables
 
 @mixin mobiles-container
+  min-width: variables.$containers-minwidth
   width: 100%
   padding: variables.$padding-mobiles
 
 @mixin screens-container
   max-width: 1080px
   padding: variables.$padding-screens
+
+@mixin screens-container-nopad
+  max-width: 1080px
+  padding: 0

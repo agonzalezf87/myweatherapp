@@ -1,16 +1,15 @@
-@mixin display-flex
-  display: flex
+$flex-display: flex
   
 @mixin all-center
-  @include display-flex
+  display: $flex-display
   justify-content: center
   align-items: center
 
 @mixin children-center
-  @include display-flex
+  display: $flex-display
   align-items: center
 
 @mixin center-spacebtwn
-  @include display-flex
+  display: $flex-display
   justify-content: space-between
   align-items: center

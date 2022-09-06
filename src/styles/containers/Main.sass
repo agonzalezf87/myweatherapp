@@ -7,13 +7,14 @@
   top: 64px
   bottom: 72px
   left: 0
-  @include flex.all-center
+  overflow-y: scroll
+  scroll-behavior: smooth
   &__content
-    @include responsive.mobiles-container
-    overflow-y: scroll
-    scroll-behavior: smooth
+    height: 100%
 
 @media screen and (min-width: 800px)
   .Main
+    @include flex.all-center
     &__content
-      @include responsive.screens-container
+      @include flex.all-center
+      @include responsive.screens-container-nopad

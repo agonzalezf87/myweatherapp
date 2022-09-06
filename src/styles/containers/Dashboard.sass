@@ -1,0 +1,25 @@
+@use '../helpers/vars' as variables
+@use '../mixins/responsive'
+
+.Dashboard
+  width: 100%
+  display: grid
+  grid-template-columns: 1fr
+  grid-auto-rows: 1fr
+  gap: 4px
+  background-color: variables.$color-grayDark
+  padding: 4px
+  .item
+    background-color: variables.$color-dark
+    color: variables.$color-clear
+    padding: 8px
+    border-radius: 4px
+
+@media screen and (min-width: 600px)
+  .Dashboard
+    grid-template-columns: repeat(2, 1fr)
+
+@media screen and (min-width: 800px)
+  .Dashboard
+    @include responsive.screens-container-nopad
+    
