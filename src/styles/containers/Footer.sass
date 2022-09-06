@@ -1,21 +1,27 @@
 @use '../helpers/vars' as variables
+@use '../mixins/responsive' as responsive
+@use '../mixins/flex' as flex
 
 .Footer
   position: absolute
   bottom: 0
   left: 0
-  width: 100%
+  width: 100vw
   height: 72px
-  padding: variables.$padding-mobiles
   background-color: variables.$color-dark
   border-top: 3px solid variables.$color-base
   color: variables.$color-clear
   font-size: 1.2rem
+  @include flex.all-center
   &__content
-    width: 100%
+    @include responsive.mobiles-container
+    @include flex.all-center
     height: 100%
-    display: flex
-    justify-content: center
-    align-items: center
     p
       text-align: center
+
+@media screen and (min-width: 800px)
+  .Footer
+    font-size: 1.4rem
+    &__content
+      @include responsive.screens-container

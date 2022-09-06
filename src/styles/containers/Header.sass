@@ -1,4 +1,5 @@
 @use '../helpers/vars' as variables
+@use '../mixins/flex' as flex
 
 .Header
   position: absolute
@@ -6,13 +7,6 @@
   left: 0
   height: 64px
   width: 100%
-  padding: variables.$padding-mobiles
   background-color: variables.$color-dark
   border-bottom: 3px solid variables.$color-base
-  display: flex
-  align-items: center
-  justify-content: center
-
-@media screen and (min-width: 600px)
-  .Header
-    padding: variables.$padding-screens
+  @include flex.all-center

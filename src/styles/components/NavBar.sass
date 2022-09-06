@@ -1,19 +1,18 @@
 @use '../helpers/vars' as variables
-  
+@use '../mixins/responsive' as responsive
+@use '../mixins/flex' as flex
+
 .NavBar
-  width: 100%
   height: 100%
   color: variables.$color-clear
-  display: flex
-  justify-content: space-between
-  align-items: center
+  @include responsive.mobiles-container
+  @include flex.children-center
   &__city
     display: flex
     width: calc(100% - 32px)
     &__info
       font-size: 1.4rem
-      display: flex
-      align-items: center
+      @include flex.children-center
       &:first-child
         font-weight: bold
       &:last-child
@@ -38,5 +37,4 @@
 
 @media screen and (min-width: 800px)
   .NavBar
-    max-width: 1024px
-    margin: 0 auto 
+    @include responsive.screens-container

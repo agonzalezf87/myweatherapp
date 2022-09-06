@@ -1,0 +1,16 @@
+@mixin display-flex
+  display: flex
+  
+@mixin all-center
+  @include display-flex
+  justify-content: center
+  align-items: center
+
+@mixin children-center
+  @include display-flex
+  align-items: center
+
+@mixin center-spacebtwn
+  @include display-flex
+  justify-content: space-between
+  align-items: center

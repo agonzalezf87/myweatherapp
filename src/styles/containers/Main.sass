@@ -1,4 +1,5 @@
-@use '../helpers/vars' as variables
+@use '../mixins/responsive' as responsive
+@use '../mixins/flex' as flex
 
 .Main
   width: 100%
@@ -6,6 +7,13 @@
   top: 64px
   bottom: 72px
   left: 0
+  @include flex.all-center
   &__content
-    width: 100%
-    padding: variables.$padding-mobiles
+    @include responsive.mobiles-container
+    overflow-y: scroll
+    scroll-behavior: smooth
+
+@media screen and (min-width: 800px)
+  .Main
+    &__content
+      @include responsive.screens-container
